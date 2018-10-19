@@ -27,6 +27,10 @@ public class JavaFXApplication8 extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setMaxHeight(300);
+        stage.setMinHeight(300);
+        stage.setMaxWidth(1200);
+        stage.setMinWidth(1200);
         stage.show();
     }
 
