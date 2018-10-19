@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
@@ -63,7 +64,8 @@ public class FXMLDocumentController implements Initializable {
     Boolean isOn=false;
     
     @FXML
-   private ToggleGroup group;       
+    private ToggleGroup group;
+        
     
     AudioClip ac1=new AudioClip(getClass().getResource("1.wav").toExternalForm());
     AudioClip ac2=new AudioClip(getClass().getResource("2.wav").toExternalForm());
@@ -156,6 +158,18 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
+        
+        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+        public void changed(ObservableValue<? extends Toggle> ov,
+        Toggle old_toggle, Toggle new_toggle) 
+        {
+            if(major!=null)
+            major.stop();
+            checkWave();
+        }
+        }
+        
+        );
         
         off();
         
