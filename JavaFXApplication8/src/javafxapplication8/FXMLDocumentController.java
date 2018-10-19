@@ -66,9 +66,9 @@ public class FXMLDocumentController implements Initializable {
    private ToggleGroup group;       
     
     AudioClip ac1=new AudioClip(getClass().getResource("1.wav").toExternalForm());
-    AudioClip ac2=new AudioClip(getClass().getResource("1.wav").toExternalForm());
-    AudioClip ac3=new AudioClip(getClass().getResource("1.wav").toExternalForm());
-    AudioClip ac4=new AudioClip(getClass().getResource("1.wav").toExternalForm());
+    AudioClip ac2=new AudioClip(getClass().getResource("2.wav").toExternalForm());
+    AudioClip ac3=new AudioClip(getClass().getResource("3.wav").toExternalForm());
+    AudioClip ac4=new AudioClip(getClass().getResource("4.wav").toExternalForm());
     AudioClip major;
    
     Double i=0.0;
@@ -202,13 +202,6 @@ public class FXMLDocumentController implements Initializable {
              
          checkWave();   
          }
-         
-         
-         
-
-
-
-        
         });
         
     }
