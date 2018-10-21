@@ -3,7 +3,6 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -43,13 +42,13 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <ImageView fitHeight="197.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
                <image>
                   <Image url="@3.png" />
                </image></ImageView>
-            <ToggleButton fx:id="tg" mnemonicParsing="false" text="ON" GridPane.columnIndex="5" GridPane.rowIndex="6" />
             <RadioButton fx:id="rb2" mnemonicParsing="false" text="D" textFill="WHITE" GridPane.columnIndex="9" GridPane.rowIndex="6">
                <toggleGroup>
                   <ToggleGroup fx:id="group" />
@@ -58,7 +57,7 @@
             <RadioButton mnemonicParsing="false" text="S" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="10" GridPane.rowIndex="6" />
             <RadioButton mnemonicParsing="false" text="K" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="11" GridPane.rowIndex="6" />
             <RadioButton fx:id="rb" mnemonicParsing="false" selected="true" text="U" textFill="WHITE" toggleGroup="$group" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-            <Slider fx:id="sli" max="1.0" value="1.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Slider fx:id="sli" max="1.0" value="1.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="6" />
             <Slider GridPane.columnIndex="7" GridPane.rowIndex="6" />
             <ProgressBar fx:id="pb" prefHeight="18.0" prefWidth="337.0" progress="0.0" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="2" />
             <ProgressBar fx:id="pb2" prefHeight="18.0" prefWidth="345.0" progress="0.0" GridPane.columnIndex="5" GridPane.columnSpan="4" GridPane.rowIndex="4" />
@@ -70,6 +69,11 @@
                </image>
             </ImageView>
             <ImageView fx:id="image2" fitHeight="215.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+            <ImageView fx:id="imageS" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@6.png" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </children>

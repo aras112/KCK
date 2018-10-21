@@ -39,6 +39,10 @@ public class FXMLDocumentController implements Initializable {
     private Label label;
     @FXML
     private ImageView image;
+    
+    @FXML
+    private ImageView imageS;
+    
     @FXML
     private ImageView image2;
     @FXML
@@ -59,8 +63,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Slider sli;
     
-    @FXML
-    private ToggleButton tg;
+
     Boolean isOn=false;
     
     @FXML
@@ -127,6 +130,7 @@ public class FXMLDocumentController implements Initializable {
     
     void off()
     {
+    imageS.setRotate(0.0);
     pb.setStyle("-fx-accent: black");
     pb2.setStyle("-fx-accent: black");
     pb3.setStyle("-fx-accent: black");
@@ -135,6 +139,7 @@ public class FXMLDocumentController implements Initializable {
     
     void on()
     {
+     imageS.setRotate(50.0);
     pb.setStyle("-fx-accent: orange ");
     pb2.setStyle("-fx-accent: orange ");
     pb3.setStyle("-fx-accent: orange ");
@@ -158,7 +163,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
-        
+       
         group.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
         public void changed(ObservableValue<? extends Toggle> ov,
         Toggle old_toggle, Toggle new_toggle) 
@@ -198,12 +203,16 @@ public class FXMLDocumentController implements Initializable {
              i=event.getX();
          }
          
+         
 
 
 
         
         });
-     tg.addEventHandler(MouseEvent.MOUSE_PRESSED,  new EventHandler<MouseEvent>()
+        
+        
+        
+     imageS.addEventHandler(MouseEvent.MOUSE_PRESSED,  new EventHandler<MouseEvent>()
          {
          @Override
          public void handle(MouseEvent event) {
